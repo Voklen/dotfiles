@@ -1,0 +1,8 @@
+[[languages]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = '/bin/prettier', args = ["--parser", "babel"] }
+auto-format = true

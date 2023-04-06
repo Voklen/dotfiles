@@ -1,0 +1,14 @@
+[user]
+	name = Alex Gorichev
+	email = Alex.Gorichev@protonmail.com
+[core]
+	symlinks = true
+[alias]
+	squish = rebase -i --autosquash --root
+	smish = rebase -i --autosquash HEAD~2
+	fix = !git commit --no-edit --fixup HEAD && git smish
+	qix = !git commit -a --no-edit --fixup HEAD && git smish
+[safe]
+	directory = /opt/flutter
+[init]
+	defaultBranch = main
