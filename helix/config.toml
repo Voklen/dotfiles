@@ -1,6 +1,7 @@
 theme = "mytheme"
 
 [editor]
+bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
