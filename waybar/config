@@ -7,9 +7,8 @@
 		"hyprland/submap",
 		"hyprland/workspaces",
 		"custom/arrow10",
-	],
-	"modules-center": [
-		"hyprland/window"
+		"hyprland/window",
+		"custom/arrow11",
 	],
 	"modules-right": [
 		"custom/arrow9",
@@ -209,6 +208,11 @@
 	},
 
 	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow11": {
 		"format": "",
 		"tooltip": false
 	}

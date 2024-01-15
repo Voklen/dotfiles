@@ -13,7 +13,7 @@
 @define-color warning #fabd2f;
 @define-color critical #cc241d;
 
-@define-color mode @black;
+@define-color window @blue;
 @define-color unfocused @base;
 @define-color focused @mantle;
 @define-color inactive @sapphire;
@@ -133,11 +133,9 @@
 }
 
 #window {
-	background: rgba(40, 40, 40, 0.6);
+	color: @black;
+	background: @window;
 	padding: 0 20px;
-	border-radius: 8pt;
-	margin-right: 35pt;
-	margin-left: 35pt;
 }
 
 #battery {
@@ -246,5 +244,11 @@
 #custom-arrow10 {
 	font-size: 13pt;
 	color: @unfocused;
+	background: @window;
+}
+
+#custom-arrow11 {
+	font-size: 13pt;
+	color: @window;
 	background: transparent;
 }
