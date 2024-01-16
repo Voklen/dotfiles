@@ -243,12 +243,6 @@
 
 #custom-arrow10 {
 	font-size: 13pt;
-	color: @unfocused;
-	background: @window;
-}
-
-#custom-arrow11 {
-	font-size: 13pt;
 	color: @window;
 	background: transparent;
 }
