@@ -13,10 +13,10 @@
 @define-color warning #fabd2f;
 @define-color critical #cc241d;
 
-@define-color window @blue;
 @define-color unfocused @base;
 @define-color focused @mantle;
-@define-color inactive @sapphire;
+@define-color inactive @blue;
+@define-color window @sapphire;
 @define-color battery @aqua;
 @define-color sound @green;
 @define-color network @yellow;
