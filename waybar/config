@@ -13,7 +13,7 @@
 		"custom/arrow9",
 		"battery",
 		"custom/arrow8",
-		"pulseaudio",
+		"wireplumber",
 		"custom/arrow7",
 		"network",
 		"custom/arrow6",
@@ -123,10 +123,10 @@
 		"format": "{name}"
 	},
 
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": "",
+	"wireplumber": {
+		"format": "{icon}  {volume}%",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-muted": "",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
@@ -134,7 +134,7 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["", ""]
+			"default": ["", "", ""]
 		},
 		"scroll-step": 1,
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
