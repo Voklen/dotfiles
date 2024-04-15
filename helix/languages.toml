@@ -35,7 +35,7 @@ auto-format = true
 [[language]]
 name = "typescript"
 language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
-formatter = { command = 'biome', args = ["format", "--stdin-file-path=file.tsx"] }
+formatter = { command = 'biome', args = ["format", "--stdin-file-path=file.ts"] }
 auto-format = true
 
 [[language]]
