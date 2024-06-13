@@ -37,6 +37,5 @@
 @define-color rosewater #f4dbd6;
 
 /* My extentions */
-@define-color aqua #689d6a;
 @define-color white @rosewater;
 @define-color black @crust;

@@ -13,18 +13,18 @@
 @define-color warning #fabd2f;
 @define-color critical #cc241d;
 
-@define-color unfocused @base;
+@define-color unfocused @black;
 @define-color focused @mantle;
-@define-color inactive @blue;
-@define-color window @sapphire;
-@define-color battery @aqua;
-@define-color sound @green;
-@define-color network @yellow;
-@define-color memory @peach;
-@define-color cpu @red;
-@define-color temp @mauve;
-@define-color layout @pink;
-@define-color date @rosewater;
+@define-color inactive @rosewater;
+@define-color window @black;
+@define-color battery @red;
+@define-color sound @maroon;
+@define-color network @peach;
+@define-color memory @yellow;
+@define-color cpu @green;
+@define-color temp @teal;
+@define-color layout @blue;
+@define-color date @mauve;
 @define-color time @black;
 
 /* Reset all styles */
@@ -133,7 +133,7 @@
 }
 
 #window {
-	color: @black;
+	color: @white;
 	background: @window;
 	padding: 0 20px;
 }
