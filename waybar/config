@@ -13,17 +13,17 @@
 		"custom/arrow9",
 		"battery",
 		"custom/arrow8",
-		"wireplumber",
-		"custom/arrow7",
-		"network",
-		"custom/arrow6",
-		"memory",
-		"custom/arrow5",
 		"cpu",
-		"custom/arrow4",
+		"custom/arrow7",
+		"memory",
+		"custom/arrow6",
 		"temperature",
-		"custom/arrow3",
+		"custom/arrow5",
+		"network",
+		"custom/arrow4",
 		"hyprland/language",
+		"custom/arrow3",
+		"wireplumber",
 		"custom/arrow2",
 		"tray",
 		"clock#date",
@@ -64,8 +64,7 @@
 	"clock#date": {
 		"interval": 20,
 		"format": "{:%e %b %Y}",
-		"tooltip": false
-		//"tooltip-format": "{:%e %B %Y}"
+		"tooltip-format": "{:%e %B %Y}"
 	},
 
 	"cpu": {
@@ -79,10 +78,9 @@
 		}
 	},
 
-	"sway/language": {
+	"hyprland/language": {
 		"format": " {}",
 		"min-length": 5,
-		"on-click": "swaymsg 'input * xkb_switch_layout next'",
 		"tooltip": false
 	},
 

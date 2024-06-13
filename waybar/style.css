@@ -14,16 +14,16 @@
 @define-color critical #cc241d;
 
 @define-color unfocused @black;
-@define-color focused @mantle;
+@define-color focused @emphasis;
 @define-color inactive @rosewater;
 @define-color window @black;
 @define-color battery @red;
-@define-color sound @maroon;
-@define-color network @peach;
-@define-color memory @yellow;
-@define-color cpu @green;
-@define-color temp @teal;
-@define-color layout @blue;
+@define-color cpu @maroon;
+@define-color memory @peach;
+@define-color temp @yellow;
+@define-color network @green;
+@define-color layout @sapphire;
+@define-color sound @blue;
 @define-color date @mauve;
 @define-color time @black;
 
@@ -42,11 +42,9 @@
 /* The whole bar */
 #waybar {
 	background: rgba(40, 40, 40, 0);
-	/* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
 	font-size: 12pt;
-	/*font-weight: bold;*/
 }
 
 /* Each module */
@@ -196,42 +194,42 @@
 #custom-arrow2 {
 	font-size: 13pt;
 	color: @date;
-	background: @layout;
+	background: @sound;
 }
 
 #custom-arrow3 {
 	font-size: 13pt;
-	color: @layout;
-	background: @temp;
+	color: @sound;
+	background: @layout;
 }
 
 #custom-arrow4 {
 	font-size: 13pt;
-	color: @temp;
-	background: @cpu;
+	color: @layout;
+	background: @network;
 }
 
 #custom-arrow5 {
 	font-size: 13pt;
-	color: @cpu;
-	background: @memory;
+	color: @network;
+	background: @temp;
 }
 
 #custom-arrow6 {
 	font-size: 13pt;
-	color: @memory;
-	background: @network;
+	color: @temp;
+	background: @memory;
 }
 
 #custom-arrow7 {
 	font-size: 13pt;
-	color: @network;
-	background: @sound;
+	color: @memory;
+	background: @cpu;
 }
 
 #custom-arrow8 {
 	font-size: 13pt;
-	color: @sound;
+	color: @cpu;
 	background: @battery;
 }
 
