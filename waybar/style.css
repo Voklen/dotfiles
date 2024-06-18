@@ -172,7 +172,7 @@
 }
 
 #tray {
-	background: @date;
+	background: @time;
 }
 
 #clock.date {
