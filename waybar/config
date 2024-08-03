@@ -1,7 +1,7 @@
 // Alex's config, based off mxkrsv's config: https://git.sr.ht/~begs/dotfiles/tree/master/item/.config/waybar
 {
 	"layer": "top",
-	"position": "bottom",
+	"position": "top",
 
 	"modules-left": [
 		"hyprland/submap",
@@ -46,11 +46,11 @@
 		"format-full": "{icon} {capacity}%",
 		"format-alt": "{icon} {power}W",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
 		],
 		"tooltip": false
 	},
@@ -79,8 +79,11 @@
 	},
 
 	"hyprland/language": {
-		"format": " {}",
-		"min-length": 5,
+		"format": "  {}",
+		"format-pl": "DV",
+		"format-en": "EN",
+		"format-ru": "РУ",
+		"min-length": 6,
 		"tooltip": false
 	},
 
@@ -96,29 +99,11 @@
 
 	"network": {
 		"interval": 5,
-		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-wifi": "  {essid} ({signalStrength}%)",
 		"format-ethernet": " {ifname}",
 		"format-disconnected": "No connection",
 		"format-alt": " {ipaddr}/{cidr}",
 		"tooltip": false
-	},
-
-	"sway/mode": {
-		"format": "{}",
-		"tooltip": false
-	},
-
-	"sway/window": {
-		"format": "{}",
-		"max-length": 30,
-		"tooltip": false
-	},
-
-	"sway/workspaces": {
-		"disable-scroll-wraparound": true,
-		"smooth-scrolling-threshold": 4,
-		"enable-bar-scroll": true,
-		"format": "{name}"
 	},
 
 	"wireplumber": {
@@ -155,8 +140,8 @@
 	},
 
 	"tray": {
-		"icon-size": 18
-		//"spacing": 10
+		"icon-size": 18,
+		"spacing": 5
 	},
 
 	"custom/arrow1": {

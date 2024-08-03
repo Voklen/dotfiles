@@ -3,14 +3,11 @@
 
 @keyframes blink-critical {
 	to {
-		/*color: @white;*/
-		background-color: @critical;
+		color: @critical;
 	}
 }
 
-
 /* Styles */
-@define-color warning #fabd2f;
 @define-color critical #cc241d;
 
 @define-color unfocused @black;
@@ -41,9 +38,11 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(40, 40, 40, 0);
+	background: transparent;
 	color: @white;
-	font-family: JetBrains Mono, Siji;
+	font-family:
+		JetBrains Mono,
+		Siji;
 	font-size: 12pt;
 }
 
@@ -80,26 +79,11 @@
 	animation-duration: 1s;
 }
 
-/* Each warning */
-#network.disconnected,
-#memory.warning,
-#cpu.warning,
-#temperature.warning,
-#battery.warning.discharging {
-	color: @warning;
-}
-
 /* And now modules themselves in their respective order */
-
-/* Current sway mode (resize etc) */
-#mode {
-	color: @white;
-	background: @mode;
-}
 
 /* Workspaces stuff */
 #workspaces button {
-	/*font-weight: bold;*/
+	font-weight: bold;
 	padding-left: 2pt;
 	padding-right: 2pt;
 	color: @white;
@@ -138,7 +122,7 @@
 
 #battery {
 	background: @battery;
-	color: @white;
+	color: @black;
 }
 
 #wireplumber {
