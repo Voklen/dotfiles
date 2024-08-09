@@ -2,9 +2,5 @@ import = [
   "~/.config/alacritty/catppuccin-macchiato.toml"
 ]
 
-[window]
-opacity = 0.95
-blur = true
-
 [colors.primary]
-background = "#101010"
+background = "#181926"
