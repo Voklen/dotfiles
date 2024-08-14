@@ -13,8 +13,9 @@
 		"custom/arrow9",
 		"battery",
 		"custom/arrow8",
-		"cpu",
+		"custom/updates",
 		"custom/arrow7",
+		"cpu",
 		"memory",
 		"custom/arrow6",
 		"temperature",
@@ -67,15 +68,12 @@
 		"tooltip-format": "{:%e %B %Y}"
 	},
 
-	"cpu": {
-		"interval": 5,
-		"tooltip": false,
-		"format": "  {usage}%",
-		"format-alt": "  {load}",
-		"states": {
-			"warning": 70,
-			"critical": 90
-		}
+	"custom/updates": {
+		"format": "  {}",
+		"escape": true,
+		"return-type": "json",
+		"exec": "~/.config/scripts/updates.sh",
+		"restart-interval": 60,
 	},
 
 	"hyprland/language": {
@@ -87,9 +85,20 @@
 		"tooltip": false
 	},
 
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": "  {usage}%",
+		"format-alt": "  {load}",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
 	"memory": {
 		"interval": 5,
-		"format": " {used:0.1f}G/{total:0.1f}G",
+		"format": " {percentage}%",
 		"states": {
 			"warning": 70,
 			"critical": 90

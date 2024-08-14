@@ -15,7 +15,7 @@
 @define-color inactive @rosewater;
 @define-color window @black;
 @define-color battery @red;
-@define-color cpu @maroon;
+@define-color updates @maroon;
 @define-color memory @peach;
 @define-color temp @yellow;
 @define-color network @green;
@@ -50,6 +50,7 @@
 #battery,
 #clock,
 #cpu,
+#custom-updates,
 #language,
 #memory,
 #mode,
@@ -141,7 +142,12 @@
 }
 
 #cpu {
-	background: @cpu;
+	background: @memory;
+	color: @black;
+}
+
+#custom-updates {
+	background: @updates;
 	color: @black;
 }
 
@@ -208,12 +214,12 @@
 #custom-arrow7 {
 	font-size: 13pt;
 	color: @memory;
-	background: @cpu;
+	background: @updates;
 }
 
 #custom-arrow8 {
 	font-size: 13pt;
-	color: @cpu;
+	color: @updates;
 	background: @battery;
 }
 
