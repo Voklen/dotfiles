@@ -98,7 +98,7 @@
 
 	"memory": {
 		"interval": 5,
-		"format": " {percentage}%",
+		"format": "  {percentage}%",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -109,20 +109,20 @@
 	"network": {
 		"interval": 5,
 		"format-wifi": "  {essid} ({signalStrength}%)",
-		"format-ethernet": " {ifname}",
+			"format-ethernet": " {ifname}",
 		"format-disconnected": "No connection",
-		"format-alt": " {ipaddr}/{cidr}",
+		"format-alt": "󰩠 {ipaddr}/{cidr}",
 		"tooltip": false
 	},
 
 	"wireplumber": {
 		"format": "{icon}  {volume}%",
 		"format-bluetooth": "{volume}% {icon}",
-		"format-muted": "",
+		"format-muted": "󰖁",
 		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
+			"headphone": "󰋋",
+			"hands-free": "",
+			"headset": "󰋎",
 			"phone": "",
 			"portable": "",
 			"car": "",
