@@ -40,9 +40,6 @@
 #waybar {
 	background: transparent;
 	color: @white;
-	font-family:
-		JetBrains Mono,
-		Siji;
 	font-size: 12pt;
 }
 
