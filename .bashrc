@@ -8,17 +8,19 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-MONTH=`date +"%b"`
-if [ $MONTH = "Dec" ];
-then # If it's December set it to be Christmas-y
+MONTH=$(date +"%b")
+if [ $MONTH = "Dec" ]; then # If it's December set it to be Christmas-y
 	PS1='\[\e[31m\]\u🎅\[\e[0;33m\]@ho-ho-h🧣me \[\e[0;36m\]\w\[\e[0m\]\n 🎁 '
+elif [ $(date +%d-%m) = "31-10" ]; then # Halloween
+	PS1='\[\e[31m\]\u\[\e[0;33m\]@\[\e[0;34m\]\h \[\e[0;36m\]\w\[\e[0m\]\n 🎃 '
+elif [ $(date +%d-%m) = "01-11" ]; then # Fountain pen day
+	PS1='\[\e[32m\]\u\[\e[0;33m\]@\[\e[0;34m\]\h \[\e[0;36m\]\w\[\e[0m\]\n 🖋️ '
 else # normal
 	PS1='\[\e[32m\]\u\[\e[0;33m\]@\[\e[0;34m\]\h \[\e[0;36m\]\w\[\e[0m\]\n λ '
 fi
 
 export EDITOR=hx
 export PATH=/home/sasha/.local/bin:$PATH
-export GTK_THEME=Adwaita:dark
 export HISTCONTROL=ignoreboth:erasedups
 
 if [ -f ~/.aliases ]; then
