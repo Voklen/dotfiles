@@ -1,7 +1,7 @@
 # Author : Alex Gorichev <me@voklen.com>
 
 "attribute" = { fg = "yellow" }
-"comment" = { fg = "light-gray", modifiers = ["italic"] }
+"comment" = { fg = "green", modifiers = ["italic"] }
 "constant" = { fg = "cyan" }
 "constant.numeric" = { fg = "gold" }
 "constant.builtin" = { fg = "gold" }
@@ -19,7 +19,7 @@
 "operator" = { fg = "purple" }
 "keyword.operator" = { fg = "purple" }
 "special" = { fg = "blue" }
-"string" = { fg = "green" }
+"string" = { fg = "gold" }
 "type" = { fg = "yellow" }
 # "variable" = { fg = "blue" }
 "variable.builtin" = { fg = "blue" }
