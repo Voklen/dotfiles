@@ -41,6 +41,7 @@
 	background: transparent;
 	color: @white;
 	font-size: 12pt;
+	font-family: "Symbols Nerd Font", "Noto Sans";
 }
 
 /* Each module */
@@ -173,61 +174,61 @@
 }
 
 #custom-arrow1 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @time;
 	background: @date;
 }
 
 #custom-arrow2 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @date;
 	background: @sound;
 }
 
 #custom-arrow3 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @sound;
 	background: @layout;
 }
 
 #custom-arrow4 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @layout;
 	background: @network;
 }
 
 #custom-arrow5 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @network;
 	background: @temp;
 }
 
 #custom-arrow6 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @temp;
 	background: @memory;
 }
 
 #custom-arrow7 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @memory;
 	background: @updates;
 }
 
 #custom-arrow8 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @updates;
 	background: @battery;
 }
 
 #custom-arrow9 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @battery;
 	background: transparent;
 }
 
 #custom-arrow10 {
-	font-size: 13pt;
+	font-size: 16pt;
 	color: @window;
 	background: transparent;
 }
