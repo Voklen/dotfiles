@@ -1,6 +1,6 @@
 [user]
 	name = Alex Gorichev
-	email = Alex.Gorichev@protonmail.com
+	email = me@voklen.com
 [core]
 	symlinks = true
 [alias]
@@ -12,3 +12,10 @@
 	directory = /opt/flutter
 [init]
 	defaultBranch = main
+[credential]
+	helper = cache
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
