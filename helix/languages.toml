@@ -1,10 +1,23 @@
-[[languages]]
+[[language]]
 name = "rust"
 auto-format = true
 
-[[languages]]
+[[language]]
+name = "java"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
 name = "c"
 auto-format = true
+
+[[language]]
+name = "bash"
+auto-format = true
+
+[[language]]
+name = "markdown"
+soft-wrap.enable = true
 
 [[language]]
 name = "python"
@@ -12,14 +25,32 @@ language-servers = ["jedi-language-server"]
 formatter = { command = 'ruff', args = ["format", "-"] }
 auto-format = true
 
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "python"
+args = ["-m",  "debugpy.adapter"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "entrypoint", completion = "filename", default = "." } ]
+args = { mode = "debug", program = "{0}" }
+
 [[language]]
 name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+formatter = { command = 'prettier', args = ["--parser", "html", "--use-tabs"] }
 auto-format = true
 
 [[language]]
+name = "svelte"
+auto-format = true
+indent = { tab-width = 2, unit = "\t" }
+
+[[language]]
 name = "css"
-formatter = { command = 'prettier', args = ["--parser", "css"] }
+#formatter = { command = 'prettier', args = ["--parser", "css"] }
+formatter = { command = 'prettier', args = ["--parser", "css", "--use-tabs"] }
 auto-format = true
 
 [language-server]
@@ -54,3 +85,17 @@ formatter = { command = 'biome', args = ["format", "--stdin-file-path=file.jsx"]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
 formatter = { command = 'biome', args = ["format", "--stdin-file-path=file.json"] }
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = { typescript = { tsdk = "/home/sasha/.bun/install/global/node_modules/typescript/lib" }}
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+language-servers = ["astro-ls"]
+formatter = { command = "prettier", args = ["--plugin", "prettier-plugin-astro", "--use-tabs", "--parser", "astro"] }
+auto-format = true
