@@ -5,9 +5,10 @@ uhash() {
 alias hash="sha256sum"
 
 # Package management
-alias get="doas pacman -Syu"
+alias get="doas pacman -S"
 alias rem="doas pacman -Rns"
 alias lite-rem="doas pacman -R"
+alias up="doas pacman -Syu"
 alias clean="pacman -Qdtq | doas pacman -Rns -"
 alias aur="paru -S"
 alias rua="paru -R" # aur backwards
@@ -19,11 +20,11 @@ alias fit="flutter test && git commit -m" # Flutter commIT
 alias fait="flutter test && git commit -am" #Flutter Add commIT
 alias checkt="tsc --noEmit --skipLibCheck --strict" # CHECK Typescript
 cpp () { clang++ -Wall -std=c++20 $1.cpp -o $1 && ./$1; }
-j () { javac *.java && java "$1"; }
+j () { javac "$1".java && java $@; }
 
 # System/Linux stuff
 alias addkey="gpg --keyserver keys.gnupg.net --recv-keys"
 alias grup="doas grub-mkconfig -o /boot/grub/grub.cfg" # grup = grub + up (as in update)
-alias vmm="doas systemctl start libvirtd"
+alias vmm="doas systemctl start libvirtd && doas virsh net-start default"
 alias docstart="systemctl start docker"
 alias dbstart="systemctl start postgresql"
