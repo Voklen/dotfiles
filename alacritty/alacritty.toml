@@ -5,3 +5,6 @@ import = [
 
 [colors.primary]
 background = "#21252C"
+
+[font]
+normal = { family = "MonaspaceNeon", style = "Regular" }
