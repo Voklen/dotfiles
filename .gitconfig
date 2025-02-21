@@ -8,6 +8,8 @@
 	smish = rebase -i --autosquash HEAD~2
 	fix = !git commit --no-edit --fixup HEAD && git smish
 	qix = !git commit -a --no-edit --fixup HEAD && git smish
+	# Commit with ADd
+	cad = !git add . && git commit
 [safe]
 	directory = /opt/flutter
 [init]
@@ -19,3 +21,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	rebase = true
