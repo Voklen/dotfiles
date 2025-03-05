@@ -134,7 +134,9 @@
 	},
 
 	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+		// Make a soft link here to your hwmon path.
+		// Something like /sys/class/hwmon/hwmon1/temp1_input
+		"hwmon-path": "/home/sasha/.config/cpu_temp",
 		"critical-threshold": 90,
 		"interval": 5,
 		"format": "{icon} {temperatureC}°",
