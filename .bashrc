@@ -23,6 +23,7 @@ fi
 export EDITOR=hx
 export PATH=/home/sasha/.local/bin:$PATH
 export HISTCONTROL=ignoreboth:erasedups
+export QT_QPA_PLATFORM=wayland
 
 if [ -f ~/.aliases ]; then
 	. ~/.aliases
