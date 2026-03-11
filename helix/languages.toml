@@ -20,6 +20,10 @@ name = "markdown"
 soft-wrap.enable = true
 
 [[language]]
+name = "typst"
+soft-wrap.enable = true
+
+[[language]]
 name = "python"
 language-servers = ["jedi-language-server"]
 formatter = { command = 'ruff', args = ["format", "-"] }
@@ -45,6 +49,7 @@ auto-format = true
 [[language]]
 name = "svelte"
 auto-format = true
+formatter = { command = 'biome', args = ["format", "--stdin-file-path=file.svelte"] }
 indent = { tab-width = 2, unit = "\t" }
 
 [[language]]
