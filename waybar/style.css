@@ -1,234 +1,211 @@
-@import "macchiato.css";
-/* Keyframes */
+@import "mocha.css";
 
-@keyframes blink-critical {
-	to {
-		color: @critical;
-	}
-}
-
-/* Styles */
-@define-color critical #cc241d;
-
-@define-color unfocused @black;
-@define-color focused @emphasis;
-@define-color inactive @rosewater;
-@define-color window @black;
-@define-color battery @red;
-@define-color updates @maroon;
-@define-color memory @peach;
-@define-color temp @yellow;
-@define-color network @green;
-@define-color layout @sapphire;
-@define-color sound @blue;
-@define-color date @mauve;
-@define-color time @black;
-
-/* Reset all styles */
 * {
-	border: none;
-	border-radius: 0;
-	min-height: 0;
-	margin: 0;
-	padding: 0;
-	box-shadow: none;
-	text-shadow: none;
-	-gtk-icon-shadow: none;
+    font-family: "Symbols Nerd Font", "Noto Sans", sans-serif;
+    font-size: 13px;
 }
 
-/* The whole bar */
-#waybar {
-	background: transparent;
-	color: @white;
-	font-size: 12pt;
-	font-family: "Symbols Nerd Font", "Noto Sans";
+window {
+    margin: 10px;
 }
 
-/* Each module */
-#battery,
-#clock,
-#cpu,
-#custom-updates,
-#language,
-#memory,
-#mode,
-#network,
-#wireplumber,
-#temperature,
-#tray,
-#backlight,
-#idle_inhibitor,
-#disk,
-#user,
-#mpris {
-	padding-left: 8pt;
-	padding-right: 8pt;
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    margin: 10px;
 }
 
-/* Each critical module */
-#mode,
-#memory.critical,
-#cpu.critical,
-#temperature.critical,
-#battery.critical.discharging {
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-name: blink-critical;
-	animation-duration: 1s;
+/* == Modules == */
+
+.module {
+    background-color: @crust;
+    border: solid transparent 2px;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin: 0 4px;
 }
 
-/* And now modules themselves in their respective order */
-
-/* Workspaces stuff */
-#workspaces button {
-	font-weight: bold;
-	padding-left: 2pt;
-	padding-right: 2pt;
-	color: @white;
-	background: @unfocused;
+.module:hover {
+    border: solid @text 2px;
 }
 
-/* Inactive (on unfocused output) */
-#workspaces button.visible {
-	color: @black;
-	background: @inactive;
+/* Left Modules */
+
+#idle_inhibitor.activated {
+    color: @maroon;
 }
 
-/* Active (on focused output) */
-#workspaces button.focused {
-	color: @black;
-	background: @focused;
-}
-
-/* Contains an urgent window */
-#workspaces button.urgent {
-	color: @black;
-	background: @warning;
-}
-
-/* Style when cursor is on the button */
-#workspaces button:hover {
-	background: @black;
-	color: @white;
-}
-
-#window {
-	color: @white;
-	background: @window;
-	padding: 0 20px;
-}
-
-#battery {
-	background: @battery;
-	color: @black;
-}
-
-#wireplumber {
-	background: @sound;
-	color: @black;
-}
-
-#network {
-	background: @network;
-	color: @black;
-}
-
-#memory {
-	background: @memory;
-	color: @black;
-}
-
-#cpu {
-	background: @memory;
-	color: @black;
+#clock {
+    color: @blue;
 }
 
 #custom-updates {
-	background: @updates;
-	color: @black;
-}
-
-#temperature {
-	background: @temp;
-	color: @black;
+    color: @mauve;
 }
 
 #language {
-	background: @layout;
-	color: @black;
+    color: @maroon;
+    margin-right: 0;
+    padding-right: 1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
-#tray {
-	background: @time;
+#keyboard-state {
+    min-width: 16px;
+    margin-left: 0;
+    padding-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#keyboard-state > label {
+    padding: 0 3px;
+}
+#keyboard-state > label.locked {
+    color: @red;
+    background: @base;
 }
 
-#clock.date {
-	background: @date;
-	color: @black;
+#wireplumber {
+    color: @text;
 }
 
-#clock.time {
-	background: @time;
-	color: @white;
+#wireplumber.muted {
+    color: @red;
 }
 
-#custom-arrow1 {
-	font-size: 16pt;
-	color: @time;
-	background: @date;
+#power-profiles-daemon.performance {
+    color: @red;
 }
 
-#custom-arrow2 {
-	font-size: 16pt;
-	color: @date;
-	background: @sound;
+#power-profiles-daemon.balanced {
+    color: @sapphire;
 }
 
-#custom-arrow3 {
-	font-size: 16pt;
-	color: @sound;
-	background: @layout;
+#power-profiles-daemon.power-saver {
+    color: @green;
 }
 
-#custom-arrow4 {
-	font-size: 16pt;
-	color: @layout;
-	background: @network;
+#tray > .passive {
+    -gtk-icon-effect: dim;
 }
 
-#custom-arrow5 {
-	font-size: 16pt;
-	color: @network;
-	background: @temp;
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @crust;
 }
 
-#custom-arrow6 {
-	font-size: 16pt;
-	color: @temp;
-	background: @memory;
+/* Centre Modules */
+
+#workspaces {
+    margin: 0;
+    padding: 4px;
 }
 
-#custom-arrow7 {
-	font-size: 16pt;
-	color: @memory;
-	background: @updates;
+#workspaces:hover {
+    border: solid transparent 2px;
 }
 
-#custom-arrow8 {
-	font-size: 16pt;
-	color: @updates;
-	background: @battery;
+#workspaces button {
+    all: unset;
+    border-radius: 30px;
+    padding: 0 5px;
+    margin: 0 2px;
+    background-color: @base;
+    color: #ffffff;
 }
 
-#custom-arrow9 {
-	font-size: 16pt;
-	color: @battery;
-	background: transparent;
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
-#custom-arrow10 {
-	font-size: 16pt;
-	color: @window;
-	background: transparent;
+#workspaces button.focused, #workspaces button.active {
+    color: @base;
+    background-color: @sapphire;
+    padding: 0 25px;
 }
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#workspaces .workspace-label {
+    padding: 0px;
+}
+
+/* Right Modules */
+
+#backlight {
+    color: @text;
+}
+
+#cpu {
+    color: @flamingo;
+    margin-right: 0;
+    padding-right: 1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#memory {
+    color: @green;
+    margin-left: 0;
+    padding-left: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#temperature {
+    color: @peach;
+}
+
+#temperature.critical {
+    color: @base;
+    background-color: @red;
+}
+
+#network {
+    color: @sky;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#battery {
+    color: @text;
+}
+
+#battery.charging, #battery.plugged {
+    color: @crust;
+    background-color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: @peach;
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: @crust;
+    animation-name: blink;
+    animation-duration: 0.6s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* I don't know what this does: */
+label:focus {
+    background-color: @base;
+}
+
+
