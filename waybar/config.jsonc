@@ -174,12 +174,12 @@
 	},
 	"network": {
 		"interval": 5,
-		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-wifi": "  ({signalStrength}%)",
 		"format-ethernet": "󰈀 {ifname}",
-		"format-disconnected": "󰀦 No connection",
+		"format-disconnected": "󱛅",
 		"format-linked": " {ifname} (No IP)",
 		"format-alt": "󰩠 {ipaddr}/{cidr}",
-		"tooltip": false
+		"tooltip-format-wifi": "{essid}"
 	},
 	"battery": {
 		"interval": 10,
