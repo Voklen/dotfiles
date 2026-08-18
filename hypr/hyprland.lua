@@ -42,6 +42,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("hyprsunset")
   hl.exec_cmd("hypridle")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
+  hl.exec_cmd("~/.cache/wallpaper/wallpaper.sh ~/Pictures/Wallpapers ~/.cache/wallpaper/wallpaper")
   -- for GTK3 apps
   hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita:dark\"")
   -- for GTK4 apps
