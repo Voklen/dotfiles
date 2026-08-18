@@ -273,7 +273,7 @@ hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("keepassxc"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("swaync-client -t -sw"))
-hl.bind(mainMod .. " + S", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + APOSTROPHE", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Screenshots
